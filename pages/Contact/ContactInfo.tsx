@@ -1,6 +1,7 @@
 import { Envelope, InstagramLogo, LinkedinLogo, MapPin, Phone, TiktokLogo, TwitterLogo } from 'phosphor-react'
 import { ContactInfoContainer, Information, SocialMediaInfo } from './styles'
-import { RegularText, TitleText } from '../../components/Typography'
+import { RegularText, TitleText } from '../../src/components/Typography'
+
 
 
 export default function ContactInfo() {

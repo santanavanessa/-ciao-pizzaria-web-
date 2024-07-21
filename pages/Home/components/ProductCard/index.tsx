@@ -1,10 +1,10 @@
 import { ShoppingCart } from "phosphor-react";
-import { QuantityInput } from "../../../../components/QuantityInput";
-import { RegularText, TitleText } from "../../../../components/Typography";
+import { QuantityInput } from "../../../../src/components/QuantityInput";
 import { AddCartWrapper, CardFooter, Description, Name, ProductCardContainer, ProductCardContent,  ProductCardImg} from "./styles";
-import { formatMoney } from "../../../../utils/formatMoney";
-import { useCart } from "../../../../components/hooks/useCart";
+import { formatMoney } from "../../../../src/utils/formatMoney"; 
+import { useCart } from "../../../../src/components/hooks/useCart";
 import { useState } from "react";
+import { RegularText, TitleText } from "../../../../src/components/Typography";
 
 export interface Product {
     id: number;

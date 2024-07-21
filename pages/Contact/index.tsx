@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "sonner";
 import ContactInfo from "./ContactInfo";
 import { ContactContainer, ContactForm, FormButton, FormContainer, InputContainer } from "./styles";
-import { TitleText } from "../../components/Typography";
+import { TitleText } from "../../src/components/Typography"; 
 
 function ContactPage() {
   // Declarar uma nova variável, dados com state e atribuir o objeto

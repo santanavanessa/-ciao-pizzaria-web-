@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { NotFoundContainer } from "./styles";
-import { RegularText, TitleText } from "../../components/Typography";
+import { RegularText, TitleText } from "./../../src/components/Typography";
 import pageNotFoundImg from "../../assets/not-found.svg";
 
 export function NotFoundPage() {
