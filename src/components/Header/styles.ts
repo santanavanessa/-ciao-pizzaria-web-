@@ -32,11 +32,8 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     white-space: nowrap;
 
- 
-  
-
-    @media (max-width: 350px) {
-      gap: 4rem;
+    @media (max-width: 450px) {
+      gap: 3rem;
 
     }
   }
@@ -76,7 +73,7 @@ export const HeaderContainer = styled.header`
 
     @media (max-width: 800px) {
      font-size: 1.8rem;
-      margin-left: 1rem;
+      margin-left: 0.2rem;
       margin-top: 0;
     }
 
@@ -149,6 +146,8 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
       svg {
         color: ${({ theme }) => theme.colors["brand-orange"]};
       }
+
+      
     `}
 
   ${({ variant }) =>

@@ -45,7 +45,7 @@ export function Header() {
           
 
           <a href="/completeOrder">
-            <HeaderButton variant="orange">
+            <HeaderButton variant="orange" className="shopping-cart">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <ShoppingCart size={20} weight="fill" />
             </HeaderButton>
