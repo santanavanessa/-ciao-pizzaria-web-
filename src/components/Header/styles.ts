@@ -69,13 +69,15 @@ export const HeaderContainer = styled.header`
   .logo {
     font-size: ${({ theme }) => theme.textSizes["title-title-l"]};
     margin-top: -0.5rem;
-   // margin-left: -1rem;
+    margin-left: -1rem;
     font-weight: bold;
     letter-spacing: -0.1px;
     text-decoration: none;
 
     @media (max-width: 768px) {
-      font-size: ${({ theme }) => theme.textSizes["title-title-m"]};
+     font-size: 1.8rem;
+      margin-left: 1rem;
+      margin-top: 0;
     }
 
     @media (max-width: 350px) {
