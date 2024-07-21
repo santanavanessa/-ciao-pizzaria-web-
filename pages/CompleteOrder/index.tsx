@@ -5,7 +5,7 @@ import { useForm, FormProvider } from 'react-hook-form';
 import * as zod from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../../components/hooks/useCart';
+import { useCart } from '../../src/components/hooks/useCart';
 
 enum PaymentMethods {
   credit = 'credit',
