@@ -1,6 +1,5 @@
 {
   "name": "ciao-pizzaria",
-  "homepage": "./",
   "private": false,
   "version": "2.0.0",
   "type": "module",
