@@ -74,7 +74,7 @@ export const HeaderContainer = styled.header`
     letter-spacing: -0.1px;
     text-decoration: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
      font-size: 1.8rem;
       margin-left: 1rem;
       margin-top: 0;
