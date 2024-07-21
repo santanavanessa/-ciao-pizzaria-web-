@@ -27,10 +27,7 @@ export function Header() {
               />{" "}
             </button>
             <a href="/" className="logo">
-              <img
-                src="/public/logo.svg"
-                alt="Logo da Ciao Pizzaria"
-              />
+              Ciao Pizzaria
             </a>
           </div>
           <div className="desktop-nav-items">
