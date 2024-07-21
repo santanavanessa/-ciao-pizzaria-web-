@@ -29,7 +29,7 @@ export const InputStyleContainer = styled.div<InputStyleContainerProps>`
     overflow: hidden;
 
     &:focus-within {
-        border-color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
+        border-color: ${({ theme }) => theme.colors["base-input"]};
     }
 
     ${({ theme, hasError }) =>

@@ -30,7 +30,7 @@ function ContactPage() {
   //Quando o usuário digitar o valor do campo, chamar com onChange a função inputValue
   //Executar a função onSubmit e chamar a função sendMsg
 
-  const sendMsg = async (e) => {
+  const sendMsg = async (e: any) => {
     e.preventDefault();
     if (data.content.length < 10) {
       setContentError("A mensagem deve ter pelo menos 10 caracteres.");
