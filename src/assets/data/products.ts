@@ -17,7 +17,7 @@ export const products = [
     {
       id: 3,
       name: "Vegana",
-      description: "Rodelas de tomate, queijo vegano, folhas de manjericão e pesto de azeitonas",
+      description: "Rodelas de tomate, queijo vegano, folhas de manjericão e molho pesto",
       photo: "cogumelo-abobrinha.jpg",
       price: 45,
     },
