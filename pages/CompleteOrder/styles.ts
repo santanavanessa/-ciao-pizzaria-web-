@@ -8,7 +8,7 @@ export const CompleteOrderContainer = styled.form`
     gap: 2rem;
     margin-bottom: 6rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
     flex-direction: column;
   }
     

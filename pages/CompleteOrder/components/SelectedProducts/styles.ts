@@ -9,7 +9,7 @@ export const SelectedProductContainer = styled.div`
     width: 40rem;
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     width: 100%;
 
     .complete-order-subtitle{ 
