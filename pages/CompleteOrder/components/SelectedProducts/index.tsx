@@ -1,8 +1,8 @@
-import { TitleText } from "../../../../components/Typography";
+import { TitleText } from "../../../../src/components/Typography"; 
 import { ProductCartCard } from "../ProductCartCard";
 import { ConfirmationSection } from "./ConfirmationSection";
 
-import { useCart } from "../../../../components/hooks/useCart";
+import { useCart } from "../../../../src/components/hooks/useCart"; 
 import { DetailsContainer, SelectedProductContainer } from "./styles";
 
 export function SelectedProducts() {

@@ -1,14 +1,14 @@
 import { Trash } from "phosphor-react";
-import { QuantityInput } from "../../../../components/QuantityInput";
-import { RegularText } from "../../../../components/Typography";
+import { QuantityInput } from "../../../../src/components/QuantityInput";
+import { RegularText } from "../../../../src/components/Typography";
 import {
   ActionsContainer,
   ProductCartCardContainer,
   RemoveButton,
 } from "./styles";
-import { CartItem } from "../../../../contexts/CartContext";
-import { formatMoney } from "../../../../utils/formatMoney";
-import { useCart } from "../../../../components/hooks/useCart";
+import { CartItem } from "../../../../src/contexts/CartContext";
+import { formatMoney } from "../../../../src/utils/formatMoney";
+import { useCart } from "../../../../src/components/hooks/useCart";
 
 interface productCartCardProps {
   product: CartItem;

@@ -1,6 +1,6 @@
 
 import { AboutContainer, AboutText } from "./styles"
-import aboutImg from "../../assets/about-img.jpg"
+import aboutImg from "../../src/assets/about-img.jpg";
 import { RegularText, TitleText } from "../../src/components/Typography"
 
 const AboutPage = () => {

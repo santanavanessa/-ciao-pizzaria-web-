@@ -4,9 +4,9 @@ import {
   HeroContent,
   HeroTitle,
 } from "./styles";
-import heroImg from "./../../../../assets/hero-img.svg";
-import { RegularText } from "../../../../components/Typography";
-import { InfoWithIcon } from "../../../../components/InfoWithIcon";
+import heroImg from "./../../../../src/assets/hero-img.svg";
+import { RegularText } from "../../../../src/components/Typography";
+import { InfoWithIcon } from "../../../../src/components/InfoWithIcon";
 import { Package, Pizza, ShoppingCart, Timer } from "phosphor-react";
 import { useTheme } from "styled-components";
 

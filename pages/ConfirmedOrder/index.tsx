@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { ConfirmedOrderContainer, OrderDetailsContainer } from "./styles";
-import confirmedOrderIllustration from "../../assets/confirmed-order.svg";
+import confirmedOrderIllustration from "../../src/assets/confirmed-order.svg";
 import { InfoWithIcon } from '../../src/components/InfoWithIcon'; 
 import { useTheme } from "styled-components";
 import { MapPin, Clock, CurrencyDollar } from "phosphor-react";

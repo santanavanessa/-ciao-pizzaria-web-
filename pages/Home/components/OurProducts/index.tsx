@@ -1,8 +1,8 @@
 // OurProducts.tsx
 import { ProductCard } from "../ProductCard";
-import { TitleText } from "../../../../components/Typography";
+import { TitleText } from "../../../../src/components/Typography";
 import { OurProductsContainer, ProductList } from "./styles";
-import { products } from "../../../../assets/data/products";
+import { products } from "./../../../../src/assets/data/products";
 
 
 export function OurProducts() {

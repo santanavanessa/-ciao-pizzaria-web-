@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { NotFoundContainer } from "./styles";
 import { RegularText, TitleText } from "./../../src/components/Typography";
-import pageNotFoundImg from "../../assets/not-found.svg";
-
+import pageNotFoundImg from "../../src/assets/not-found.svg";
 export function NotFoundPage() {
   return (
     <NotFoundContainer className="container">

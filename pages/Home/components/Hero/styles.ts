@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import heroBackgroundImg from "../../../../assets/hero-gradient.svg";
+import heroBackgroundImg from "../../../../src/assets/hero-gradient.svg";
+import { TitleText } from "../../../../src/components/Typography";
 import { rgba } from "polished";
-import { TitleText } from "../../../../components/Typography";
 
 export const HeroContainer = styled.section`
   width: 100%;

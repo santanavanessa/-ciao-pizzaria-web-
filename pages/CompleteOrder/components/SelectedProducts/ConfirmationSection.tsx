@@ -1,7 +1,7 @@
-import { Button } from '../../../../components/Button'
-import { RegularText } from '../../../../components/Typography'
-import { useCart } from '../../../../components/hooks/useCart'
-import { formatMoney } from '../../../../utils/formatMoney'
+import { Button } from '../../../../src/components/Button'
+import { RegularText } from '../../../../src/components/Typography'
+import { useCart } from '../../../../src/components/hooks/useCart'
+import { formatMoney } from '../../../../src/utils/formatMoney'
 import { ConfirmationSectionContainer } from './styles'
 
 const DELIVERY_PRICE = 3.5
