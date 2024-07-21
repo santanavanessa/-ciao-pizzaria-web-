@@ -28,7 +28,7 @@ export function Header() {
             </button>
             <a href="/" className="logo">
               <img
-                src="/../../src/assets/logo.svg"
+                src="/public/logo.svg"
                 alt="Logo da Ciao Pizzaria"
               />
             </a>
