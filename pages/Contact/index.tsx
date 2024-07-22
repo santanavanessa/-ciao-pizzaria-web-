@@ -3,7 +3,8 @@ import axios from "axios";
 import { toast } from "sonner";
 import ContactInfo from "./ContactInfo";
 import { ContactContainer, ContactForm, FormButton, FormContainer, InputContainer } from "./styles";
-import { TitleText } from "../../src/components/Typography"; 
+import { TitleText } from "../../src/components/Typography";
+
 
 function ContactPage() {
   // Declarar uma nova variável, dados com state e atribuir o objeto
@@ -24,7 +25,7 @@ function ContactPage() {
 
   // Receber os dados dos campos do formulário
 
-  const inputValue = (e) =>
+  const inputValue = (e: any) =>
     setData({ ...data, [e.target.name]: e.target.value });
 
   //Quando o usuário digitar o valor do campo, chamar com onChange a função inputValue
@@ -48,7 +49,7 @@ function ContactPage() {
     };
 
     await axios
-      .post("http://localhost:8080/message", data, headers)
+      .post("https://api-ciao-pizzaria.vercel.app/message", data, headers)
       .then((response) => {
         setMessage(response.data.message);
         toast.success("Mensagem cadastrada com sucesso!");
