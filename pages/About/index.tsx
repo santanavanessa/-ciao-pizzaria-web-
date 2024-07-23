@@ -2,10 +2,20 @@
 import { AboutContainer, AboutText } from "./styles"
 import aboutImg from "../../src/assets/about-img.jpg";
 import { RegularText, TitleText } from "../../src/components/Typography"
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
-    <AboutContainer className="container" id="about">
+    <AboutContainer as={motion.section} className="container" id="about"
+    initial={{ opacity: 0, y: 0 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      delay: 0.1,
+      duration: 0.6,
+      ease: "easeInOut",
+      type: "tween",
+    }}
+    >
         <AboutText>
             <TitleText size="l" color="subtitle">
                 Sobre Nós

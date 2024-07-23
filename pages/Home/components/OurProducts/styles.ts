@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const OurProductsContainer = styled.section`
+export const OurProductsContainer = styled(motion.section)`
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 1024px) {
         padding: 0 2rem;
@@ -41,4 +41,6 @@ export const ProductList = styled.div`
   @media (max-width: 560px) {
     grid-template-columns: 1fr;
   }
+
+
 `

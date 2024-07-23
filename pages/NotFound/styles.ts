@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const NotFoundContainer = styled.div`
+export const NotFoundContainer = styled(motion.div)`
     max-width: 100vw;
     display: flex;
     flex-direction: column;

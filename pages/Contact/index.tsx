@@ -10,6 +10,7 @@ import {
 } from "./styles";
 import { TitleText } from "../../src/components/Typography";
 import { FormInput } from "./FormInput";
+import { motion } from "framer-motion";
 
 interface Values {
   name: string;
@@ -86,7 +87,18 @@ const ContactPage = () => {
   };
 
   return (
-    <ContactContainer>
+    <ContactContainer as={motion.section}
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity:   1,
+    }}
+    transition={{
+      duration: 1,
+      delay: 0.5,
+    }}
+    >
       <ContactForm onSubmit={handleSubmit} className="container">
         <ContactInfo />
         <FormContainer>

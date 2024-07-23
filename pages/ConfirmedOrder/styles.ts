@@ -1,10 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ConfirmedOrderContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 5rem;
 
   h1 {
     color: ${({ theme }) => theme.colors["base-text"]};
@@ -39,7 +39,7 @@ export const ConfirmedOrderContainer = styled.div`
 
 `;
 
-export const OrderDetailsContainer = styled.div`
+export const OrderDetailsContainer = styled(motion.div)`
   padding: 2rem;
   border-radius: 6px;
   position: relative;

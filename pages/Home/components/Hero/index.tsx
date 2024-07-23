@@ -9,11 +9,20 @@ import { RegularText } from "../../../../src/components/Typography";
 import { InfoWithIcon } from "../../../../src/components/InfoWithIcon";
 import { Package, Pizza, ShoppingCart, Timer } from "phosphor-react";
 import { useTheme } from "styled-components";
+import { motion } from "framer-motion";
 
 export function Hero() {
   const { colors } = useTheme();
   return (
-    <HeroContainer id="hero">
+    <HeroContainer
+      as={motion.section}
+      id="hero"
+      initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+    >
       <HeroContent className="container">
         <div className="content-wrapper">
           <div>
@@ -41,14 +50,12 @@ export function Hero() {
               />
               <InfoWithIcon
                 iconBg={colors["brand-orange"]}
-                icon={<Pizza weight="fill"/>}
+                icon={<Pizza weight="fill" />}
                 text="Seu pedido chega fresquinho até você"
               />
             </BenefitsContainer>
           </div>
-          <img 
-          src={heroImg}
-           alt="Foto de uma pizza sabor marguerita" />
+          <img src={heroImg} alt="Foto de uma pizza sabor marguerita" />
         </div>
       </HeroContent>
     </HeroContainer>

@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { OrderData } from "../CompleteOrder";
 import { paymentMethods } from "../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions";
 import { RegularText, TitleText } from '../../src/components/Typography';
+import { motion } from 'framer-motion';
 
 interface LocationType {
   state: OrderData;
@@ -29,7 +30,18 @@ export function ConfirmedOrderPage() {
   if (!state) return null;
 
   return (
-    <ConfirmedOrderContainer className="container">
+    <ConfirmedOrderContainer as={motion.section} className="container"
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity:   1,
+    }}
+    transition={{
+      duration: 1,
+      delay: 0.3,
+    }}
+    >
       <div>
         <TitleText size="l">Pedido confirmado!</TitleText>
         <RegularText size="l" color="subtitle">
@@ -75,7 +87,18 @@ export function ConfirmedOrderPage() {
             }
           />
         </OrderDetailsContainer>
-        <img src={confirmedOrderIllustration} alt="Ilustração de pedido confirmado" />
+        <motion.img src={confirmedOrderIllustration} alt="Ilustração de pedido confirmado"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity:   1,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.8,
+            }}
+        />
       </section>
     </ConfirmedOrderContainer>
   );

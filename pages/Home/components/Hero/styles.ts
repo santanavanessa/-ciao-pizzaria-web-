@@ -2,8 +2,9 @@ import styled from "styled-components";
 import heroBackgroundImg from "../../../../src/assets/hero-gradient.svg";
 import { TitleText } from "../../../../src/components/Typography";
 import { rgba } from "polished";
+import { motion } from "framer-motion";
 
-export const HeroContainer = styled.section`
+export const HeroContainer = styled(motion.section)`
   width: 100%;
   height: 34rem;
   background: ${({ theme }) => `url(${heroBackgroundImg}) no-repeat center,
@@ -75,7 +76,7 @@ export const BenefitsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   row-gap: 1rem;
   margin-top: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 800px) {
     grid-template-columns: 1fr;

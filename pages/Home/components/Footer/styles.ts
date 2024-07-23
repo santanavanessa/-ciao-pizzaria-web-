@@ -54,7 +54,6 @@ export const SocialMediaLinks = styled.ul`
     display: flex;
     gap: 1rem;
     list-style-type: none;
-    //margin: 2rem 0;
     cursor: pointer;
     align-items: center;
     justify-content: center;

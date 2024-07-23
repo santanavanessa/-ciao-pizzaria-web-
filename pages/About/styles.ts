@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const AboutContainer = styled.section`
+export const AboutContainer = styled(motion.section)`
   display: grid;
   padding-block: 5rem;
   grid-template-columns: 1fr 1fr;
