@@ -11,15 +11,14 @@ export const ContactContainer = styled.section`
   align-items: center;
   justify-content: center;
 
-
   h2,
   h3 {
     margin: 0.5rem 0;
   }
 
   p {
-  margin: 0.3rem 0;
-}
+    margin: 0.3rem 0;
+  }
 
   @media (min-width: 1440px) {
     width: 100vw;
@@ -29,32 +28,26 @@ export const ContactContainer = styled.section`
 
   @media (max-width: 768px) {
     max-width: 100vw;
-
   }
 
   @media (max-width: 480px) {
     max-width: 100vw;
     padding: 0;
-}
-
+  }
 `;
 
-export const ContactForm =styled.form`
-    width: 100%;
-    max-width: 820px;
-    background-color: ${({ theme }) => theme.colors["base-white"]};
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+export const ContactForm = styled.form`
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors["base-white"]};
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-    
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  
-
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -78,9 +71,7 @@ export const FormContainer = styled.div`
     form {
       grid-template-columns: 1fr;
     }
-
   }
-
 `;
 
 export const ContactInfoContainer = styled.div`
@@ -143,35 +134,38 @@ export const InputContainer = styled.div`
     line-height: 1.5;
   }
 
-  .input {
+  p {
+    color: ${({ theme }) => theme.colors["dark-gray-text"]};
+  }
+
+  .formInput input,
+  .formInput textarea {
     width: 100%;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
-    color: #0c0c0c;
+    color: ${({ theme }) => theme.colors["base-text"]};
     font-weight: 500;
     font-size: 0.95rem;
     border: 2px solid ${({ theme }) => theme.colors["base-background"]};
     background: none;
     letter-spacing: 0.5px;
     transition: 0.3s;
-  }
+    }
+  
 
-  .input:focus {
+  .formInput input:focus,
+  .formInput textarea:focus {
     outline: 1px solid ${({ theme }) => theme.colors["base-white"]};
   }
 
-  textarea.input {
-    padding: 0.8rem 1.2rem;
-    resize: none;
-    height: 6rem;
-    overflow-y: auto;
-  }
+  .formInput span {
+  display: none;
+}
 
-  .error {
-    font-size: 12px;
-    color: #4f0303;
-    font-weight: 700;
-  }
+.formInput input[focused="true"] ~ span,
+.formInput textarea[focused="true"] ~ span {
+  display: block;
+}
 
   ::placeholder {
     color: ${({ theme }) => theme.colors["base-background"]};
@@ -182,13 +176,13 @@ export const InputContainer = styled.div`
 `;
 
 export const FormButton = styled.button`
-    border: none;
-    border-radius: 6px;
-    text-transform: uppercase;
-    max-width: 20rem;
-    transition: 0.4s;
-    line-height: 1.3rem;
-    padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  max-width: 20rem;
+  transition: 0.4s;
+  line-height: 1.3rem;
+  padding: 0.75rem;
   background-color: ${({ theme }) => theme.colors["base-white"]};
   border: 2px solid ${({ theme }) => theme.colors["base-background"]};
   font-size: 0.95rem;
@@ -207,9 +201,7 @@ export const FormButton = styled.button`
   }
 
   &:hover {
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors["base-white"]};
-}
-  
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors["base-white"]};
+  }
 `;
-

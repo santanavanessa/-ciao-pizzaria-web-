@@ -1,156 +1,115 @@
 import { useState } from "react";
-import axios from "axios";
 import { toast } from "sonner";
 import ContactInfo from "./ContactInfo";
-import { ContactContainer, ContactForm, FormButton, FormContainer, InputContainer } from "./styles";
+import {
+  ContactContainer,
+  ContactForm,
+  FormButton,
+  FormContainer,
+  InputContainer,
+} from "./styles";
 import { TitleText } from "../../src/components/Typography";
+import { FormInput } from "./FormInput";
 
+interface Values {
+  name: string;
+  surname: string;
+  email: string;
+  subject: string;
+  content: string;
+}
 
-function ContactPage() {
-  // Declarar uma nova variável, dados com state e atribuir o objeto
+const initialValues: Values = {
+  name: '',
+  surname: '',
+  email: '',
+  subject: '',
+  content: '',
+};
 
-  const [data, setData] = useState({
-    // O setData é um objeto que recebe os dados através do state;
+const ContactPage = () => {
+  const [values, setValues] = useState<Values>(initialValues);
 
-    name: "",
-    surname: "",
-    email: "",
-    subject: "",
-    content: "",
-  });
+  const inputs = [
+    {
+      id: 1,
+      name: 'name',
+      type: 'text',
+      required: true,
+      label: 'Seu nome',
+      errorMessage: "O nome deve ter entre 3 e 20 caracteres",
+      pattern: "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]{3,20}$",
+    },
+    {
+      id: 2,
+      name: 'surname',
+      type: 'text',
+      required: true,
+      label: 'Seu sobrenome',
+      errorMessage: "O sobrenome deve ter entre 3 e 20 caracteres",
+      pattern: "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]{3,20}$",
+    },
+    {
+      id: 3,
+      name: 'email',
+      type: 'email',
+      required: true,
+      label: 'Seu melhor e-mail',
+      errorMessage: "Por favor, digite um e-mail válido",
+    },
+    {
+      id: 4,
+      name: 'subject',
+      type: 'text',
+      required: true,
+      label: 'Assunto da mensagem',
+    },
+    {
+      id: 5,
+      name: 'content',
+      type: 'textarea',
+      required: true,
+      label: 'Sua mensagem',
+      errorMessage: 'A mensagem deve ter no mínimo 10 caracteres',
+      minLength: 10,
+    },
+  ];
 
-  // Declarar a variável para receber a mensagem
-
-  const [message, setMessage] = useState("");
-
-  // Receber os dados dos campos do formulário
-
-  const inputValue = (e: any) =>
-    setData({ ...data, [e.target.name]: e.target.value });
-
-  //Quando o usuário digitar o valor do campo, chamar com onChange a função inputValue
-  //Executar a função onSubmit e chamar a função sendMsg
-
-  const sendMsg = async (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (data.content.length < 10) {
-      setContentError("A mensagem deve ter pelo menos 10 caracteres.");
-      return;
-    } else {
-      setContentError("");
-    }
-    // Manipular os dados recebidos e enviá-los para uma API
-
-    const headers = {
-      headers: {
-        // Indicar que os dados serão enviados em formato de objeto
-        "Content-Type": "application/json",
-      },
-    };
-
-    await axios
-      .post("https://api-ciao-pizzaria.vercel.app/message", data, headers)
-      .then((response) => {
-        setMessage(response.data.message);
-        toast.success("Mensagem cadastrada com sucesso!");
-        //Limpar dados do state e dados dos campos do formulário
-        setData({
-          name: "",
-          surname: "",
-          email: "",
-          subject: "",
-          content: "",
-        });
-      })
-      .catch((err) => {
-        setMessage(err.response.data.message);
-        toast.error("Erro: Mensagem não cadastrada");
-      });
+    toast.success('Mensagem enviada com sucesso!');
+    setValues(initialValues);  // Limpa o formulário
   };
 
-  const [contentError, setContentError] = useState("");
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
 
   return (
     <ContactContainer>
-      <ContactForm onSubmit={sendMsg}>
+      <ContactForm onSubmit={handleSubmit} className="container">
         <ContactInfo />
         <FormContainer>
-          <TitleText size="l" className="form-title">Fale com a gente!</TitleText>
-
+          <TitleText size="l" className="form-title">
+            Fale com a gente!
+          </TitleText>
           <InputContainer>
-            <label htmlFor="name">Seu nome</label>
-            <input
-              type="text"
-              name="name"
-              className="input"
-              required
-              onChange={inputValue}
-              value={data.name}
-              pattern="[A-Za-zÀ-ÿ\s]{3,}" // Permitindo letras e espaços, com pelo menos 3 caracteres
-              title="Por favor, insira um nome válido com pelo menos 3 caracteres. Apenas letras e espaços são permitidos."
-            />
+            {inputs.map((input) => (
+              <FormInput
+                key={input.id}
+                {...input}
+                value={values[input.name as keyof Values]}
+                onChange={onChange}
+              />
+            ))}
           </InputContainer>
-
-          <InputContainer>
-            <label htmlFor="surname">Seu sobrenome</label>
-            <input
-              type="text"
-              name="surname"
-              className="input"
-              required
-              onChange={inputValue}
-              value={data.surname}
-              pattern="[A-Za-zÀ-ÿ\s]{3,}" // Permitindo letras e espaços, com pelo menos 3 caracteres
-              title="Por favor, insira um sobrenome válido com pelo menos 3 caracteres. Apenas letras e espaços são permitidos."
-            />
-          </InputContainer>
-
-          <InputContainer>
-            <label htmlFor="email">Seu melhor e-mail</label>
-            <input
-              type="email"
-              name="email"
-              className="input"
-              required
-              onChange={inputValue}
-              value={data.email}
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" // Formato de email
-              title="Por favor, insira um e-mail válido."
-            />
-          </InputContainer>
-
-          <InputContainer>
-            <label htmlFor="subject">Assunto da mensagem</label>
-            <input
-              type="text"
-              name="subject"
-              className="input"
-              required
-              onChange={inputValue}
-              value={data.subject}
-              pattern=".{3,}" // Pelo menos 3 caracteres
-              title="O assunto deve ter pelo menos 3 caracteres."
-            />
-          </InputContainer>
-
-          <InputContainer className="textarea">
-            <label htmlFor="content">Digite sua mensagem</label>
-            <textarea
-              name="content"
-              className="input"
-              required
-              onChange={inputValue}
-              value={data.content}
-            >
-            </textarea>
-            {contentError && <span className="error">{contentError}</span>}
-          </InputContainer>
-
-          <FormButton type="submit" className="btn">Enviar mensagem</FormButton>
+          <FormButton type="submit" className="btn">
+            Enviar mensagem
+          </FormButton>
         </FormContainer>
       </ContactForm>
     </ContactContainer>
   );
-}
+};
 
 export default ContactPage;
