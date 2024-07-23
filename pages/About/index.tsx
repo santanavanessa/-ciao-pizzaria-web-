@@ -27,10 +27,19 @@ const AboutPage = () => {
             </RegularText>
             
         </AboutText>
-        <img 
+        <motion.img
         src={aboutImg} 
+        initial={{ opacity: 0, y: 0 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{
+             delay: 0.8,
+             duration: 0.8,
+             ease: "easeIn"
+           }}
         alt="Foto de um pizzaiolo colocando uma pizza no forno. O pizzaiolo veste um avental branco e uma camiseta preta. 
-        Ele segura uma pá com uma pizza fresca, pronta para assar." />
+        Ele segura uma pá com uma pizza fresca, pronta para assar."
+        
+        />
     </AboutContainer>
   )
 }

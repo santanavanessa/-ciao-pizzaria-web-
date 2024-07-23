@@ -29,7 +29,7 @@ export const AboutContainer = styled(motion.section)`
     padding: 0 2rem;
 
     img {
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
   }
 `;

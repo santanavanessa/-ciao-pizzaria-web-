@@ -55,7 +55,14 @@ export function Hero() {
               />
             </BenefitsContainer>
           </div>
-          <img src={heroImg} alt="Foto de uma pizza sabor marguerita" />
+          <motion.img src={heroImg} alt="Foto de uma pizza sabor marguerita"
+           initial={{ opacity: 0, y: 0 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{
+             delay: 0.8,
+             duration: 1,
+           }}
+          />
         </div>
       </HeroContent>
     </HeroContainer>
