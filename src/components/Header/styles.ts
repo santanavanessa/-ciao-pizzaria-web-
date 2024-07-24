@@ -28,7 +28,7 @@ export const HeaderContainer = styled.header`
 
    nav, .desktop-nav-items {
     display: flex;
-    gap: 8rem;
+    gap: 6rem;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
