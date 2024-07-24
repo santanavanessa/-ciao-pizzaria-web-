@@ -3,6 +3,7 @@ import { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
+  position: fixed;
   height: 6.5rem;
   padding: 0 7.5rem;
   background: ${({ theme }) => theme.colors["base-background"]};
