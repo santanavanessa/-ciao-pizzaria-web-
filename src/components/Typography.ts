@@ -20,6 +20,11 @@ export const TitleText = styled.h1<TitleTextProps>`
     font-weight: ${({ weight }) => weight ?? 800};
     margin-bottom: 1rem;
 
+    @media (max-width: 400px) {
+        font-size: ${({ theme, size}) => theme.textSizes[`title-title-${size ?? "s"}`]};
+        font-weight: ${({ weight }) => weight ?? 700};
+    }
+
 `
 
 export const RegularText = styled.p<RegularTextProps>`

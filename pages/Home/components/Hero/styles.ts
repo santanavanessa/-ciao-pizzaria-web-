@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 export const HeroContainer = styled(motion.section)`
   width: 100%;
+  margin-top: clamp(2rem, 3rem, 4rem);
   height: 34rem;
   background: ${({ theme }) => `url(${heroBackgroundImg}) no-repeat center,
       linear-gradient(
@@ -18,6 +19,7 @@ export const HeroContainer = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: center;
+
 `;
 
 export const HeroContent = styled.div`

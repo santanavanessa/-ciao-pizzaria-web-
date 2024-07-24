@@ -5,6 +5,7 @@ export const ContactContainer = styled(motion.section)`
   position: relative;
   max-width: 100vw;
   min-height: 100vh;
+  margin-top: 4rem;
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors["base-background"]};
   overflow: hidden;
@@ -29,11 +30,13 @@ export const ContactContainer = styled(motion.section)`
 
   @media (max-width: 768px) {
     max-width: 100vw;
+    margin-top: 4rem;
   }
 
   @media (max-width: 480px) {
     max-width: 100vw;
     padding: 0;
+    margin-top: 5.5rem;
   }
 `;
 

@@ -12,12 +12,13 @@ export const AboutContainer = styled(motion.section)`
   img {
     flex: 1;
     border-radius: 6px;
+    margin-top: 3rem;
   }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 0 2rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
 
     img {
       margin-bottom: 4rem;
