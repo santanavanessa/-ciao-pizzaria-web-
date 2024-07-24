@@ -7,22 +7,21 @@ import { motion } from "framer-motion";
 
 export function OurProducts() {
   return (
-    <OurProductsContainer as={motion.section} className="container" id="products"
-    initial={{
-      opacity: 0,
-    }}
-    whileInView={{
-      opacity:   1,
-    }}
-    transition={{
-      duration: 1,
-      delay: 0.5,
-    }}
-    >
+    <OurProductsContainer className="container" id="products">
       <TitleText size="l" color="subtitle">
         Nossas Pizzas
       </TitleText>
-      <ProductList>
+      <ProductList as={motion.div}
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.8,
+          duration: 1,
+          ease: "easeInOut",
+          type: "tween",
+
+        }}
+      >
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

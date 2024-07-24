@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const OurProductsContainer = styled(motion.section)`
+export const OurProductsContainer = styled.section`
     width: 100%;
     margin-bottom: 2rem;
 
@@ -24,7 +24,7 @@ export const ProductCardContainer = styled.div`
     margin-top: 2rem;
 `;
 
-export const ProductList = styled.div`
+export const ProductList = styled(motion.div)`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
