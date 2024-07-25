@@ -5,13 +5,13 @@ export const ContactContainer = styled(motion.section)`
   position: relative;
   max-width: 100vw;
   min-height: 100vh;
-  margin-top: 4rem;
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors["base-background"]};
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2.5rem;
 
   h2,
   h3 {
@@ -28,15 +28,15 @@ export const ContactContainer = styled(motion.section)`
     padding: 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     max-width: 100vw;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
   }
 
   @media (max-width: 480px) {
     max-width: 100vw;
     padding: 0;
-    margin-top: 5.5rem;
+    margin-top: 2rem;
   }
 `;
 

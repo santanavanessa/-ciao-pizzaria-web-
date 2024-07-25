@@ -5,6 +5,8 @@ export const ConfirmedOrderContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 4rem;
+  padding: 0 2rem;
 
   h1 {
     color: ${({ theme }) => theme.colors["base-text"]};
@@ -20,6 +22,9 @@ export const ConfirmedOrderContainer = styled.div`
     justify-content: space-between;
   }
     
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
 
     @media (max-width: 768px) {
       align-items: center;

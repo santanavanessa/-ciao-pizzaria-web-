@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export const HeroContainer = styled(motion.section)`
   width: 100%;
-  margin-top: clamp(2rem, 3rem, 4rem);
   height: 34rem;
   background: ${({ theme }) => `url(${heroBackgroundImg}) no-repeat center,
       linear-gradient(
@@ -19,7 +18,6 @@ export const HeroContainer = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 
 export const HeroContent = styled.div`
@@ -45,6 +43,13 @@ export const HeroContent = styled.div`
 
     @media (max-width: 800px) {
       grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 26rem;
+      padding: 0 2rem;
+      flex-direction: column-reverse;
+      > img {
+        width: 100%;
+      }
     }
   }
 
@@ -52,18 +57,8 @@ export const HeroContent = styled.div`
     padding: 0 2rem;
   }
 
-  @media (max-width: 800px) {
-    gap: 1rem;
-    margin-top: 24rem;
-    padding: 0 2rem;
-    flex-direction: column-reverse;
-    > img {
-      width: 100%;
-    }
-  }
-
   @media (max-width: 450px) {
-    margin-top: 28rem;
+    margin-top: 25rem;
   }
 `;
 
@@ -78,9 +73,10 @@ export const BenefitsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   row-gap: 1rem;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
 
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+    padding:  0;
   }
 `;

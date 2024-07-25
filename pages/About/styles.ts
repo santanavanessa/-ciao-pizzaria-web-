@@ -8,6 +8,7 @@ export const AboutContainer = styled(motion.section)`
   grid-auto-rows: minmax(300px, auto);
   column-gap: 2rem;
   row-gap: 2rem;
+  margin-top: -3.5rem;
 
   img {
     flex: 1;
@@ -18,7 +19,7 @@ export const AboutContainer = styled(motion.section)`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 0 2rem;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
 
     img {
       margin-bottom: 4rem;

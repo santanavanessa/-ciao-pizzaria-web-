@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const OurProductsContainer = styled.section`
     width: 100%;
     margin-bottom: 2rem;
+    margin-top: 2.5rem;
 
     @media (max-width: 1024px) {
         padding: 0 2rem;
@@ -15,7 +16,7 @@ export const OurProductsContainer = styled.section`
   }
 
   @media (max-width: 450px) {
-    margin-top: 24rem;
+    margin-top: 30rem;
   } 
 `;
 

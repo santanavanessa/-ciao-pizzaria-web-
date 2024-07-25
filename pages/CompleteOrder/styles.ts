@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const CompleteOrderContainer = styled.form`
     width: 100vw;
-    margin-top: 5rem;
+    margin-top: 4.2rem;
     display: flex;
     justify-content: space-between;
     gap: 2rem;

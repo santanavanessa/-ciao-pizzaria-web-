@@ -28,6 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: ${({ theme }) => theme.colors["base-background"]};
   color: ${({ theme }) => theme.colors["base-text"]};
+  padding-top: 5rem;
 
 }
 
