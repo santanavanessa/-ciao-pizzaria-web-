@@ -16,13 +16,25 @@ export function NotFoundPage() {
     >
       <TitleText size="l">Página não encontrada!</TitleText>
 
-      <img src={pageNotFoundImg} alt="Ilustração de página não encontrada" />
+      <motion.img src={pageNotFoundImg} alt="Ilustração de página não encontrada"
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: 0.5,
+      }}
+      
+      />
 
+      <div>
       <RegularText size="l" color="subtitle">
-        A página que você está tentando acessar não existe ou foi modificada.
-        <br />
-        Tente voltar para a página inicial.
+      A página que você está procurando não está disponível. 
+
+      <br />
+      Por favor, volte para a página inicial
+        
+        
       </RegularText>
+      </div>
 
       <button>
         <Link to="/">Ir para a página inicial</Link>

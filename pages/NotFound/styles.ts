@@ -6,15 +6,23 @@ export const NotFoundContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 2rem;
     text-align: center;
     align-items: center;
     justify-content: center;
     
-    
+    h1 {
+        margin-bottom: 1rem;
+    }
     img {
       max-width: 30rem;
       
+      }
+
+
+      div {
+        padding: 0 2rem;
+        color: ${({ theme }) => theme.colors["base-text"]};
+        font-weight: bold;
       }
 
 
