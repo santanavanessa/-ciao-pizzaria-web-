@@ -6,6 +6,7 @@ import { useCart } from "../hooks/useCart";
 import { useState } from "react";
 import { MobileMenu } from "./MobileMenu";
 
+
 export function Header() {
   const { cartQuantity } = useCart();
   const [menuIsVisible, setMenuIsVisible] = useState(false);

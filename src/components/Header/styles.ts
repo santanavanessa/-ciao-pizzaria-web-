@@ -4,7 +4,7 @@ import { css } from "styled-components";
 export const HeaderContainer = styled.header`
   width: 100%;
   position: fixed;
-  height: 6.5rem;
+  height: 5rem;
   padding: 0 7.5rem;
   background: ${({ theme }) => theme.colors["base-background"]};
   display: flex;
@@ -14,6 +14,9 @@ export const HeaderContainer = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px;
+
+
 
   .header-menu-button {
     cursor: pointer;
@@ -23,6 +26,13 @@ export const HeaderContainer = styled.header`
 
   nav {
     width: 100vw;
+  }
+
+  .desktop-nav-items a:hover {
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors["brand-orange"]};
+    transition: 0.3s;
+
   }
  
 
