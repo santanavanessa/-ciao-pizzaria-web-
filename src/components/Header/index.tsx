@@ -13,12 +13,14 @@ export function Header() {
 
   return (
     <>
-      <MobileMenu
+      
+      <HeaderContainer>
+      
+        <nav>
+        <MobileMenu
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
       />
-      <HeaderContainer>
-        <nav>
           <div className="mobile-nav-items">
             <button className="header-menu-button">
               <List

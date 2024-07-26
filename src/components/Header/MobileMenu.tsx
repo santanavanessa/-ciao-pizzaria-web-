@@ -15,6 +15,7 @@ export function MobileMenu({
     document.body.style.overflowY = menuIsVisible ? "hidden" : "auto";
   }, [menuIsVisible]);
 
+
   const handleMenuItemClick = () => {
     setMenuIsVisible(false);
   };

@@ -184,7 +184,7 @@ export const MobileMenuContainer = styled.section<MobileMenuContainerProps>`
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,11 +192,10 @@ export const MobileMenuContainer = styled.section<MobileMenuContainerProps>`
   background: linear-gradient(135deg, #f26e30, #e18e4e);
   color: ${({ theme }) => theme.colors["base-white"]};
 
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(50px);
-
-  transition: 0.5s;
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  pointer-events: ${({ isVisible }) => (isVisible ? 'auto' : 'none')};
+  transform: ${({ isVisible }) => (isVisible ? 'translateY(0)' : 'translateY(50px)')};
+  transition: opacity 0.5s, transform 0.5s;
 
   > svg {
     position: absolute;
