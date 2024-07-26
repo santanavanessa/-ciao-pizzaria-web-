@@ -29,6 +29,7 @@ export const AboutContainer = styled(motion.section)`
   @media (min-width: 769px) and (max-width: 1200px) {
     row-gap: 4rem;
     padding: 0 2rem;
+    margin-top: 1.5rem;
 
     img {
       margin-top: 4rem;
