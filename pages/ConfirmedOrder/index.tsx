@@ -96,7 +96,7 @@ export function ConfirmedOrderPage() {
             }}
             transition={{
               duration: 1,
-              delay: 0.8,
+              delay: 0.5,
             }}
         />
       </section>

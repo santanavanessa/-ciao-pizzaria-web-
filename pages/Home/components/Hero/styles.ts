@@ -45,10 +45,9 @@ export const HeroContent = styled.div`
       grid-template-columns: 1fr;
       gap: 1rem;
       margin-top: 26rem;
-      padding: 0 2rem;
       flex-direction: column-reverse;
       > img {
-        width: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -57,8 +56,8 @@ export const HeroContent = styled.div`
     padding: 0 2rem;
   }
 
-  @media (max-width: 450px) {
-    margin-top: 25rem;
+  @media (max-width: 660px) {
+    margin-top: 5rem;
   }
 `;
 

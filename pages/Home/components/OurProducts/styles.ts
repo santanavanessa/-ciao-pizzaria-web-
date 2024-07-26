@@ -15,8 +15,8 @@ export const OurProductsContainer = styled.section`
     
   }
 
-  @media (max-width: 450px) {
-    margin-top: 30rem;
+  @media (max-width: 540px) {
+    margin-top: 24rem;
   } 
 `;
 
